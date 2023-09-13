@@ -1,9 +1,27 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import CouponList from '../coupon/CouponList'
 import CouponListWrap from '../coupon/CouponListWrap'
+import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/react'
 
 function Benecoupon() {
+  const [isLogin, setIsLogin] =useState<Boolean>(false)
+  const route=useRouter();
+  const session=useSession();
+
+  const [modaltext,setModalText]=useState<string>("");
+  const [modalIsOpen,setModalStatus]=useState<boolean>(false)
+  
+  const modalStatus=(modaltext:string,modalIsOpen:boolean)=>{
+    setModalText(modaltext)
+    setModalStatus(modalIsOpen)
+  }
+
+  useEffect(()=>{
+    setIsLogin(session.status==="authenticated")
+  },[session])
   return (
     <>
       <div className='coupon_list_wrap p-5 pt-6'>
@@ -16,15 +34,15 @@ function Benecoupon() {
             </select>
           </div>
           <div className='text-[14px] font-semibold flex'>
-            <Link href={'/couponpage'}>
+            <div onClick={()=>route.push('/couponpage')}>
             <p className='pr-2 text-[12px] text-[#767676]'>더 많은 쿠폰 보기{'>'}
             </p>
-            </Link>
+            </div>
           </div>
         </div>
 
         {/* 쿠폰 list div */}
-        <CouponListWrap/>
+        <CouponListWrap isLogin={isLogin} modalStatus={modalStatus}/>
       </div>
     </>
   )

@@ -42,8 +42,6 @@ function SignUpStepper() {
   ]
 
   useEffect(() => {
-    console.log(signUpData)
-    console.log(stepId);
     
   },[signUpData])
 

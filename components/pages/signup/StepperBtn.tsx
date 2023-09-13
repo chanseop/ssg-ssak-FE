@@ -91,8 +91,8 @@ function StepperBtn({btnText, stepId, setStepId,signUpData,setSignUpData} : {btn
       }else{
         // fetch를 해야함 여기서
         // console.log('!!!!!!!!!!!!!!!!!!');
-        console.log(signUpData)
-        fetch(`http://10.10.10.185:8000/api/v1/auth/sign-up`, {
+        // console.log(signUpData)
+        fetch(`http://15.164.17.12:8000/api/v1/auth/sign-up`, {
           method: "POST", // *GET, POST, PUT, DELETE 등
           headers: {
             "Content-Type": "application/json",
@@ -106,11 +106,14 @@ function StepperBtn({btnText, stepId, setStepId,signUpData,setSignUpData} : {btn
             email:signUpData.email,
           }) // body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 함
         }).then(
-          res => console.log(res)
+          res => {
+            console.log(res)
+            setStepId(stepId + 1)
+          }
         ).catch(
           error => console.log(error)
         )
-        setStepId(stepId + 1)
+        
       }
         
       }

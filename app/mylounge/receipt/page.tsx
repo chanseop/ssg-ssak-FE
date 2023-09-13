@@ -4,6 +4,7 @@ import React from 'react';
 import { useState } from 'react';
 import Linearbutton from '@/components/ui/button/Linearbutton';
 import Image from 'next/image';
+import LoginRedirectModal from '@/components/ui/modal/LoginRedirectModal';
 
 function receipt() {
 
@@ -36,7 +37,7 @@ function receipt() {
   const clickred="border inline-block w-full h-[49px] text-center leading-[49px] text-white bg-[#ea035c]"
   return (
     <>
-
+      <LoginRedirectModal/>    
       <div className='mt-[105px]'>
         <div className='px-[20px] py-[40px]'>
           <p className='text-[20px]'>    

@@ -3,18 +3,13 @@
 import React from 'react'
 import { useState } from 'react';
 import Image from 'next/image'
-import { CertDataType } from '@/types/login/CertDataType';
+
 import Linearbutton from '@/components/ui/button/Linearbutton';
 
-function momdetail(props: {types:string}) {
-
-  const types=props.types
+function momdetail() {
   
-  const [certData, setCertData] = useState<CertDataType>({
-    cert: 'phone',
+  const [certData, setCertData] = useState({
     gender: 'M',
-    foreigner: "no",
-
   });
 
   const liOn="bg-black text-white"
