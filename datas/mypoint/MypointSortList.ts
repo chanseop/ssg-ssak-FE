@@ -1,0 +1,22 @@
+export const MypointSortList=[
+  {
+    id:"sortRadio00",
+    name:"sortPointList",
+    contents:"전체"
+  },
+  {
+    id:"sortRadio01",
+    name:"sortPointList",
+    contents:"적립/사용"
+  },
+  {
+    id:"sortRadio02",
+    name:"sortPointList",
+    contents:"선물"
+  },
+  {
+    id:"sortRadio03",
+    name:"sortPointList",
+    contents:"전환"
+  },
+]

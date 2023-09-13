@@ -1,0 +1,9 @@
+.slider_wrap ul .swiper .swiper-scrollbar {
+    position: absolute;
+    left: 30px;
+    bottom: 46px;
+    width: 73%;
+    height: 2px;
+    z-index: 1;
+    background: rgba(0,0,0,.1);
+}

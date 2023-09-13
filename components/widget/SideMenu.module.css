@@ -1,0 +1,160 @@
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidemenuwrap {
+    width: 320px;
+    height: 100%;
+    background-color: var(--ssg-point-secondary);
+    position: fixed;
+    top: 0;
+    left: -320px;
+    z-index: 200;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.sidemenuwrap.open {
+    overflow-y: auto;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.lnb_header{
+    height: 60px;
+    padding: 16px 0 0 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top:10px;
+}
+
+.lnb_top{
+    position:relative;
+    
+}
+
+.top_cnt{
+    padding: 18px 20px 24px 20px;
+}
+
+.app_btn_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login_txt{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight:600;
+}
+
+.bnt_box{
+    /* display: flex;
+    margin-top:25px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 12px;
+    box-sizing: border-box; */
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 25px;
+    
+}
+
+.btn_primary{
+    height: 36px;
+    font-size: 12px;
+    padding-top: 6px!important;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 12px ;
+    background: linear-gradient(110deg,#f40000 -5.78%,#ff8a00 17.06%,#f8b404 33.44%,#f9ad05 48.81%,#ff8a00 64.68%,#b258cb 85.01%,#00c4b4 103.04%);
+    color: #000;
+    font-weight: 500;
+    font-weight: 600;
+}
+
+.btn_primary1{
+    height: 36px;
+    font-size: 12px;
+    padding-top: 6px!important;
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    border-color: #969595;
+    border-width: 1px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: 12px ;
+    background: white;
+    color: #000;
+    font-weight: 500;
+    font-weight: 600;
+}
+
+.btn0{
+    margin-left: 8px;
+    height: 36px;
+    font-size: 12px;
+    padding-top: 6px!important;
+    border-radius: 6px;
+    color: #fff;
+    background: #000;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 12px;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.menu_box{
+    margin-bottom: 10px;
+    position: relative;
+    height: 80px;
+    display: flex;
+    width: 33%;
+    padding-right: 1px;
+    box-sizing: border-box;
+    vertical-align: top;
+    font-size: 6px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* padding: 40px 0 0 0; */
+    width: 100%;
+    height: 100%;
+    font-size: 11px;
+    line-height: 16px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    white-space: nowrap;
+}
+

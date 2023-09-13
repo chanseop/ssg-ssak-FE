@@ -1,0 +1,18 @@
+.back_btn{
+    width: 48px;
+    height: 56px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-indent: -999em;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAqCAYAAABYzsDTAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB1SURBVHgB7dfNDYAgGIPh4gSO4Aa6uSM5AiMo380Q/EloOfVNuD5NjAdI0DSXs0JQoLmcE+TuMBWvYRregin4E5zR2Rvc9bcYNmzY8J8WFRztbHjCoGTf2wMe8IAHPADCFfprgFZrgFo9QC8GjsATNMUjd7sAO9vdPKq2APgAAAAASUVORK5CYII=) 50% no-repeat;
+    background-size: 8px auto;
+}
+
+.gnb_tit{
+    padding-left: 1.9rem;
+    padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+}

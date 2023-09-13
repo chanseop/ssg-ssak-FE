@@ -1,0 +1,267 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "log-in": {
+    "loginId": "seop",
+    "password": "1234"
+  },
+
+  "mypage":[
+    {
+      "title":"마이 포인트",
+      "type":"mypoint",
+      "contents":[
+        {
+          "id":1,
+          "title":"포인트 내역",
+          "imgUrl":"/images/sidemenu/menu_00.png",
+          "url":"/mypoint/pnthistory"
+        },
+        {
+          "id":2,
+          "title":"포인트 카드 관리",
+          "imgUrl":"/images/sidemenu/menu_01.png",
+          "url":"/mypoint/cardmanage"
+        },
+        {
+          "id":3,
+          "title":"포인트 선물",
+          "imgUrl":"/images/sidemenu/menu_02.png",
+          "url":"/mypoint/pntgiftmain"
+        },
+        {
+          "id":4,
+          "title":"제휴포인트 카드 관리",
+          "imgUrl":"/images/sidemenu/menu_03.png",
+          "url":"/mypoint/regaffiliatepntcard"
+        },
+        {
+          "id":5,
+          "title":"포인트 전환",
+          "imgUrl":"/images/sidemenu/menu_04.png",
+          "url":"/mypoint/converpntlist"
+        },
+        {
+          "id":6,
+          "title":"영수증으로 적립",
+          "imgUrl":"/images/sidemenu/menu_05.png",
+          "url":"/mypoint/savepoint"
+        },
+        {
+          "id":7,
+          "title":"포인트 비밀번호 변경",
+          "imgUrl":"/images/sidemenu/menu_06.png",
+          "url":"/mypoint/chgpntpwdcert"
+        }
+      ]
+    },
+    {
+      "title":"마이 혜택",
+      "type":"benfits",
+      "contents":[
+        {
+          "id":1,
+          "title":"포인트 플러스",
+          "imgUrl":"/images/sidemenu/menu_07.png",
+          "url":"/benefits/pnthplus/attend"
+        },
+        {
+          "id":2,
+          "title":"나의 운세 보기",
+          "imgUrl":"/images/sidemenu/menu_08.png",
+          "url":"/benefits/benefitmyluck"
+        },
+        {
+          "id":3,
+          "title":"마이 쿠폰함",
+          "imgUrl":"/images/sidemenu/menu_09.png",
+          "url":"/benefits/mycoupon"
+        },
+        {
+          "id":4,
+          "title":"마이 이벤트",
+          "imgUrl":"/images/sidemenu/menu_10.png",
+          "url":"/benefits/myevent"
+        },
+        {
+          "id":5,
+          "title":"포인트 꿀팁",
+          "imgUrl":"/images/sidemenu/menu_11.png",
+          "url":"/benefits/pnttip"
+        }
+      ]
+    },
+    {
+      "title":"마이 라운지",
+      "type":"mylounge",
+      "contents":[
+        {
+          "id":1,
+          "title":"쇼핑 히스토리",
+          "imgUrl":"/images/sidemenu/menu_12.png",
+          "url":"/mylounge/history"
+        },
+        {
+          "id":2,
+          "title":"추천 서비스",
+          "imgUrl":"/images/sidemenu/menu_13.png",
+          "url":"/mylounge/recommend"
+        },
+        {
+          "id":3,
+          "title":"스마트 영수증",
+          "imgUrl":"/images/sidemenu/menu_14.png",
+          "url":"/mylounge/receipt"
+        },
+        {
+          "id":4,
+          "title":"매장 찾기",
+          "imgUrl":"/images/sidemenu/menu_15.png",
+          "url":"/mylounge/findstore"
+        },
+        {
+          "id":5,
+          "title":"자주 찾는 매장",
+          "imgUrl":"/images/sidemenu/menu_16.png",
+          "url":"/mylounge/regularstore"
+        }
+      ]
+    },
+    {
+      "title":"마이 회원정보",
+      "type":"myinfo",
+      "contents":[
+        {
+          "id":1,
+          "title":"광고정보 수신관리",
+          "imgUrl":"/images/sidemenu/menu_17.png",
+          "url":"/myinfo/inforcvagree"
+        },
+        {
+          "id":2,
+          "title":"서비스 동의관리",
+          "imgUrl":"/images/sidemenu/menu_18.png",
+          "url":"/myinfo/serviceagree"
+        },
+        {
+          "id":3,
+          "title":"회원정보 수정",
+          "imgUrl":"/images/sidemenu/menu_19.png",
+          "url":"/myinfo/cert"
+        },
+        {
+          "id":4,
+          "title":"비밀번호 변경",
+          "imgUrl":"/images/sidemenu/menu_20.png",
+          "url":"/myinfo/changepwd"
+        },
+        {
+          "id":5,
+          "title":"회원 탈퇴",
+          "imgUrl":"/images/sidemenu/menu_21.png",
+          "url":"/myinfo/leavepassword"
+        }
+      ]
+    }
+  ],
+
+  "staticsidebarmenu":[
+    {
+      "title":"신세계포인트",
+      "contents":[
+        {
+          "id":1,
+          "title":"가맹점 소개",
+          "imgUrl":"/images/sidemenu/menu_22.png",
+          "url":"/spoint/memberstore"
+        },
+        {
+          "id":2,
+          "title":"포인트 카드",
+          "imgUrl":"/images/sidemenu/menu_23.png",
+          "url":"/spoint/pointcard"
+        },
+        {
+          "id":3,
+          "title":"포인트 서비스",
+          "imgUrl":"/images/sidemenu/menu_24.png",
+          "url":"/spoint/pointservice"
+        },
+        {
+          "id":4,
+          "title":"임시 발급 카드 인증",
+          "imgUrl":"/images/sidemenu/menu_25.png",
+          "url":"/spoint/tempcardcert"
+        },
+        {
+          "id":5,
+          "title":"신세계그룹 뉴스레터",
+          "imgUrl":"/images/sidemenu/menu_26.png",
+          "url":"/spoint/newsletter"
+        }
+      ]
+    },
+    {
+      "title":"멤버십 서비스",
+      "contents":[
+        {
+          "id":1,
+          "title":"신세계포인트 통합 ID 관리",
+          "imgUrl":"/images/sidemenu/menu_27.png",
+          "url":"/membership/pointid"
+        },
+        {
+          "id":2,
+          "title":"클럽",
+          "imgUrl":"/images/sidemenu/menu_28.png",
+          "url":"/membership/club"
+        },
+        {
+          "id":3,
+          "title":"신세계 유니버스 클럽",
+          "imgUrl":"/images/sidemenu/menu_29.png",
+          "url":"/membership/combine"
+        }
+      ]
+    },
+    {
+      "title":"고객센터",
+      "contents":[
+        {
+          "id":1,
+          "title":"공지사항",
+          "imgUrl":"/images/sidemenu/menu_30.png",
+          "url":"/cscenter/notice"
+        },
+        {
+          "id":2,
+          "title":"FAQ",
+          "imgUrl":"/images/sidemenu/menu_31.png",
+          "url":"/cscenter/faq"
+        },
+        {
+          "id":3,
+          "title":"1:1 상담",
+          "imgUrl":"/images/sidemenu/menu_32.png",
+          "url":"/cscenter/consult/write"
+        }
+      ]
+    }
+]
+
+}
