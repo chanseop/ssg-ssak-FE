@@ -2,6 +2,8 @@ import HomeMiddleMenus from '@/components/pages/home/HomeMiddleMenus'
 import { EventBanner } from '@/components/pages/home/EventBanner'
 import { eventDatas } from '@/datas/home/eventData'
 import { anotherEventData } from '@/datas/home/anotherEventData'
+import { secondData } from '@/datas/home/secondData'
+import { clubbanData } from '@/datas/home/clubbanData'
 
 export default function Home() {
   
@@ -16,10 +18,10 @@ export default function Home() {
         data={anotherEventData}
       />
       <EventBanner 
-        data={anotherEventData}
+        data={secondData}
       />
       <EventBanner 
-        data={anotherEventData}
+        data={clubbanData}
       />
     </main>
   )
