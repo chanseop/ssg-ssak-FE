@@ -10,7 +10,7 @@ function recommend() {
     <div className='mt-[105px] text-[20px] px-[20px] py-[40px]'>
       <p>
       <strong className='txt_line0 pk relative z-1 align-top pl-[1px] pr-[4px] 
-      after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:bottom-0 after:left-0'>김진성</strong>
+      after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:bottom-0 after:left-0'>토마토</strong>
       고객님을 위한
       <br />
       추천 서비스!

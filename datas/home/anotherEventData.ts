@@ -1,10 +1,5 @@
 export const anotherEventData =[
-    {
-        id: 1,
-        url: '/',
-        imgUrl: "/images/home/homeevent1.jpg",
-        imgAlt: "7월의 맘키드클럽 플러스 행사상품"
-    },
+    
     {
         id: 2,
         url: '/',

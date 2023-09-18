@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import CouponList from '../coupon/CouponList'
 import CouponListWrap from '../coupon/CouponListWrap'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 
 function Benecoupon() {

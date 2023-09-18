@@ -1,8 +1,57 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
+import { useSession } from 'next-auth/react';
+
+
 import Image from 'next/image'
 import Linearbutton from '@/components/ui/button/Linearbutton'
+import { request } from 'http';
 
 function beauty() {
+  // const [point,setPoint]=useState<number>(-1);
+  const session = useSession()
+
+  const token=session.data?.user.token
+  const postFetch = async () => {
+    // console.log("token : ", token)
+    try {
+        await fetch('http://15.164.17.12:8000/api/v1/club/beauty',{
+          method:'POST',
+          headers:{
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+          }
+        })
+        .then(response=>response.json())
+        .then(data=>console.log(data))
+      } catch (error) {
+          console.log(error);
+
+      }
+    }
+
+  useEffect(()=>{
+    const getFetch = async () => {
+      // console.log("token : ", token)
+      try {
+          await fetch('http://15.164.17.12:8001/api/v1/club/clublist',{
+            method:'GET',
+            headers:{
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`
+            }
+          })
+          .then(response=>response.json())
+          .then(data=>console.log(data))
+        } catch (error) {
+            console.log(error);
+  
+        }
+      }
+      getFetch()
+  },[token])
+
+
   return (
     <>
     <main className='mt-[106px]'>
@@ -56,8 +105,10 @@ function beauty() {
           <li className='mt-[8px] inline-block w-1/3'>· 네이저리퍼블릭</li>
         </div>
       </div>
+      <div className='mt-6 bg-linear_110 text-center text-[14px] font-semibold h-[48px] rounded-[8px] leading-[48px]' onClick={()=>postFetch()}
+      >가입하기</div>
 
-      <Linearbutton contents='가입하기' url='null' />
+      {/* <Linearbutton contents='가입하기' url='/membership/club' /> */}
     </div>
       </div>
     </main>

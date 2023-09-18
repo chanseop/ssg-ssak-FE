@@ -104,7 +104,7 @@ function mypage() {
         <p>
           {/* TODO : z-index 배경에 덮히는 문제 해결해야 */}
           <strong className='txt_line0 pk relative align-top text-[18px] pl-[1px] pr-[4px]
-          after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-2] after:bottom-0 after:left-0'>김진성</strong>
+          after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-2] after:bottom-0 after:left-0'>토마토</strong>
           님,
           <br />
           통합ID로 더 다양한 멤버십을 만나보세요!

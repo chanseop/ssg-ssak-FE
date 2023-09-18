@@ -14,6 +14,7 @@ function receipt() {
     setChecked(!Checked)
   } */
 
+// 비활성화 해제하는 부분
   const [termsChecked, setTermsChecked] = useState(false);
   const [CheckboxDisabled, setCheckboxDisabled] = useState(true);
 
@@ -26,6 +27,43 @@ function receipt() {
       setCheckboxDisabled(true);
     }
   };
+// label CSS 속성 바꾸는 부분
+  const [isChecked, setIsChecked] = useState(false);
+  const checkedClass = isChecked ? 'bg-[#ea035c] text-white' : 'text-black'
+
+  // 전체선택
+  const data = [
+    {id: 1, title: '(주)신세계푸드'},
+    {id: 2, title: '(주)신세계사이먼'},
+    {id: 3, title: '(주)신세계조선호텔'},
+    {id: 4, title: '(주)이마트'},
+    {id: 5, title: '(주)신세계'},
+    {id: 6, title: '(주)이마트에브리데이'},
+    {id: 7, title: '(주)이마트24'},
+    {id: 8, title: '(주)스타필드'},
+    {id: 9, title: '(주)신세계L&B'},
+    {id: 10, title: '(주)에스에스지닷컴'}
+  ];
+
+  const [checkItems, setCheckItems] = useState<number[]>([]);
+
+  const handleSingleCheck = (checked:any, id:number) => {
+    if (checked) {
+      setCheckItems(prev => [...prev, id]);
+    } else {
+      setCheckItems(checkItems.filter((el) => el !==id));
+    }
+  };
+
+  const handleAllCheck = (checked:any) => {
+    if(checked) {
+      const idArray:any = [];
+      data.forEach((el) => idArray.push(el.id));
+      setCheckItems(idArray);
+    }
+    else { setCheckItems([]);
+    }
+  }
 
 
   const filterImage="after:w-[20px] after:h-[19px] after:bg-[url('/images/mypoint/filterImage.png')] after:bg-cover after:bg-no-repeat after:inline-block"
@@ -56,12 +94,12 @@ function receipt() {
         </div>
       </div>
 
-    {/* TODO : 체크박스 상태관리 필요 */}
     <div className='lounge_box2 px-[20px] pb-[25px]'>
       <ul className='agree_list_bnt h-10'>
         <li className='agree_form relative'>
           <div className='check_box'>
-            <input id='checkbox1' className='align-middle w-[20px] h-[20px] appearance-none border rounded-full checked:bg-black border-black' type ="checkbox" checked={termsChecked}
+            <input id='checkbox1' className='align-middle w-[20px] h-[20px] appearance-none border rounded-full checked:bg-black border-black' type ="checkbox"
+            checked={termsChecked}
             onChange={handleTermsChange} />
             <label className='pl-[10px] align-top'>
               <span className='text-[11px] font-semibold'>[선택] 전자영수증 조회를 위한 제 3자 제공동의</span>
@@ -80,26 +118,42 @@ function receipt() {
         </li>
       </ul>
 
+      <div>
       <div className='check_box'>
+
         <input id='checkbox2'  disabled={CheckboxDisabled}
         className={`align-middle w-[20px] h-[20px] appearance-none border rounded-full checked:bg-black border-black `}
-        type ="checkbox" /*{Checked? disabled:null}*//>
-          <label className='pl-[10px] align-top'>
+        type ="checkbox"
+        onChange={(e) => handleAllCheck(e.target.checked)}
+          checked={checkItems.length === data.length ? true : false}/>
+      <label className='pl-[10px] align-top'>
             <span className='text-[11px] font-semibold '>전체 선택</span>
           </label>
       </div>
 
       <div className='brand_info mt-[20px] mb-[25px]' >
         <ul id='list_cnt' className='text-[11px] text-[#767676]'>
-        
-          <div className='border inline-block w-1/3 h-[49px]'>
-            <label className='border inline-block w-full h-[49px] text-center leading-[49px]'>
-            <input type="checkbox"  disabled={CheckboxDisabled}
-            className='appearance-none absolute left-5 w-[116px] h-[49px] text-center leading-[49px] checked:-z-1 checked:bg-[#ea035c] checked:text-white' />
-            <span>(주)신세계푸드</span>
+          {data?.map((data, key) => (
+          <div key={key} className={`border inline-block w-1/3 h-[49px] `}>
+            <label className={`border inline-block w-full h-[49px] text-center leading-[49px] 
+            ${checkedClass}`}>
+              <input
+              type="checkbox"
+              name={`select-${data.id}`}
+              disabled={CheckboxDisabled}
+              className='appearance-none'
+              onChange={(e) => {
+            setIsChecked(e.target.checked);}}
+              />
+                <span>{data.title}</span>
             </label>
           </div>
-          <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)신세계사이먼</li>
+        ))}
+        </ul>
+
+{/*         handleSingleCheck(e.target.checked, data.id);}}
+            checked={checkItems.includes(data.id) ? true : false} */}
+{/*           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)신세계사이먼</li>
           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)신세계조선호텔</li>
           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)이마트</li>
           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)신세계</li>
@@ -107,10 +161,11 @@ function receipt() {
           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)이마트24</li>
           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)스타필드</li>
           <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)신세계L&B</li>
-          <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)에스에스지닷컴</li>
-        </ul>
+          <li className='border inline-block w-1/3 h-[49px] text-center leading-[49px]'>(주)에스에스지닷컴</li> */}
+
+        </div>
       </div>
-      <Linearbutton contents='저장하기' url='/'/>
+      <Linearbutton contents='저장하기' url='null'/>
     </div>
 
 

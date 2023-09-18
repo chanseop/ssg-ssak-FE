@@ -6,7 +6,6 @@ import LoginRedirectModal from '@/components/ui/modal/LoginRedirectModal'
 async function pntHistory() {
   const receiptsEventLogo="before:bg-[url('/images/mypoint/receiptEventLogo.png')] before:absolute before:left-6 before:mt-[-20px] before:bg-no-repeat before:w-10 before:h-10 before:bg-cover before:top-1/2"
   
-  
 
   return (
     <section className='pt-[106px]'>

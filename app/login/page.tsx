@@ -2,6 +2,8 @@ import LoginForm from '@/components/pages/login/loginForm'
 import React from 'react'
 
 function Login() {
+  // console.log(process.env);
+  
   return (
     <section className='pt-[56px]'>
       <div className='p-10'>

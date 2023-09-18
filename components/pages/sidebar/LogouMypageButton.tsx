@@ -4,17 +4,18 @@ import styles from '@/components/widget/SideMenu.module.css'
 import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import Image from 'next/image'
+import { userType } from '@/types/user/userType'
 
-function LogouMypageButton() {
+function LogouMypageButton({user,point}:{user:userType,point:number}) {
   return (
     <>
       {/* 로그인 회원가입 버튼 div */}
       <div className={styles.lnb_top}>
           <div className={styles.top_cnt}>
             <div >
-              <div className="text-[17px] "><strong>임찬섭</strong>님 반갑습니다.</div>
+              <div className="text-[17px] "><strong>{user.userName}</strong>님 반갑습니다.</div>
               <div className='flex pt-2 text-[24px] font-bold gap-2'>
-                53
+                {point}
                 <div className='bg-[url("https://m.shinsegaepoint.com/img/point_gradi.d5d9bfaf.png")] bg-no-repeat bg-[100%_auto] w-[30px]'></div>
               </div>
             </div>

@@ -13,7 +13,7 @@ function history() {
     {/* 쇼핑히스 div1 */}
       <div className='mt-[105px] px-[20px] py-[40px]'>
         <p className='mb-[8px] text-[14px]'>
-        <strong className='relative z-1 after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:top-2 after:left-0.5'>김진성</strong>
+        <strong className='relative z-1 after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:top-2 after:left-0.5'>토마토</strong>
         님과 신세계포인트는
         <br />
         올해 이렇게 함께했어요.
@@ -97,7 +97,7 @@ function history() {
     <div className='brand_use_wrap01 pb-[20px] px-[20px]'>
         <p className='text-[20px]'>
       <strong className='txt_line0 pk relative z-1 align-top pl-[1px] pr-[4px] 
-      after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:bottom-0 after:left-0'>김진성</strong>
+      after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:bottom-0 after:left-0'>토마토</strong>
       고객님이
       <br />
       자주 방문하는 브랜드
@@ -115,7 +115,7 @@ function history() {
     <div className='brand_use_wrap01 pb-[20px] px-[20px]'>
         <p className='text-[20px]'>
       <strong className='txt_line0 pk relative z-1 align-top pl-[1px] pr-[4px] 
-      after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:bottom-0 after:left-0'>김진성</strong>
+      after:bg-[#fed6e8] after:content:"" after:inline-block after:absolute after:w-full after:h-[15px] after:z-[-1] after:bottom-0 after:left-0'>토마토</strong>
       고객님이
       <br />
       많이 쇼핑하는 브랜드

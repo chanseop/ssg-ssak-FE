@@ -20,6 +20,10 @@ function club() {
         </p>
       </div>
 
+      <div>
+      <h3 className='text-[17px] font-semibold pt-[40px] px-[20px] pb-[16px]'>MY 클럽</h3>
+      
+      </div>
       <h3 className='text-[17px] font-semibold pt-[40px] px-[20px] pb-[16px]'>이런 클럽은 어때요?</h3>
 
       <ClubService />

@@ -9,8 +9,9 @@ import FavoriteMenu from '../pages/sidebar/FavoriteMenu'
 import SideBarMenuWrap from '../pages/sidebar/SideBarMenuWrap'
 import Image from 'next/image'
 import LogouMypageButton from '../pages/sidebar/LogouMypageButton'
+import { userType } from '@/types/user/userType'
 
-function SideMenu(props: {isLogin:Boolean, isOpened: Boolean, setIsOpened:React.Dispatch<React.SetStateAction<Boolean>>}) {
+function SideMenu(props: {isLogin:Boolean, isOpened: Boolean, setIsOpened:React.Dispatch<React.SetStateAction<Boolean>> ,user:userType ,point:number}) {
 	
 	const {isOpened, setIsOpened}=props
   const isLogin=props.isLogin;
@@ -46,7 +47,7 @@ function SideMenu(props: {isLogin:Boolean, isOpened: Boolean, setIsOpened:React.
         {
           isLogin
           ?
-          <LogouMypageButton/>
+          <LogouMypageButton user={props.user} point={props.point}/>
           :
           <SignInUpButton/>
         }

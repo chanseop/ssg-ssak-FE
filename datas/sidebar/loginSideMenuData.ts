@@ -55,7 +55,7 @@ export const loginSideMenu=[
         "id":1,
         "title":"포인트 플러스",
         "imgUrl":"/images/sidemenu/menu_07.png",
-        "url":"/benefits/pnthplus/attend"
+        "url":"/benefits/pntPlus/attend"
       },
       {
         "id":2,

@@ -4,7 +4,7 @@ import Barcode from '../ui/barcode/Barcode'
 import Link from 'next/link'
 
 
-function BottomCard(props:{bottomCard:string, setBottomCard:React.Dispatch<React.SetStateAction<string>> ,barcodenumber:string}) {
+function BottomCard(props:{bottomCard:string, setBottomCard:React.Dispatch<React.SetStateAction<string>> ,barcodenumber:string,point:number}) {
   const {bottomCard,setBottomCard}=props
   const barcodenumber=props.barcodenumber
 
@@ -16,7 +16,7 @@ function BottomCard(props:{bottomCard:string, setBottomCard:React.Dispatch<React
       <div className='flex justify-between relative'>
         <h3 className='bg-[url("/images/mypoint/cardSinsegaeLogo.png")] w-[113px] h-[20px] bg-cover indent-[-999rem] mt-[1px]'/>
         <div className='flex absolute right-0 gap-1 text-[17px] font-bold'>
-          53
+          {props.point}
           <div className='bg-[url("/images/home/pointlogo.png")] w-[9px] h-[16px] bg-cover mt-1'></div>
         </div>
       </div>

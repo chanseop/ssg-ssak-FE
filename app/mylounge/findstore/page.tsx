@@ -1,9 +1,10 @@
+import SsgMap from '@/components/map/SsgMap'
 import React from 'react'
 
-function page() {
+function findstore() {
   return (
-    <div>page</div>
+    <SsgMap />
   )
 }
 
-export default page
+export default findstore

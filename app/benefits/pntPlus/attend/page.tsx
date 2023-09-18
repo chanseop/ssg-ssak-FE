@@ -20,7 +20,7 @@ function attend() {
     <>
       <div>
         <Image
-          src={`/images/benefits/attend.png`}
+          src={`/images/benefits/9month.jpg`}
           alt='출석체크'
           width={390}
           height={447}>

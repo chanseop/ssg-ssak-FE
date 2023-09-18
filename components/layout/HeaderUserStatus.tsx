@@ -1,19 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useSession } from 'next-auth/react';
 
-function HeaderUserStatus() {
-  const [point,setPoint]=useState<number>(0);
+function HeaderUserStatus({point}:{point:number}) {
 
-  useEffect(()=>{
-    const getPoint=()=>fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/auth/log-in`)
-    .then(response=>response.json)
-    .then(data =>{
-      console.log(data);
-      // setPoint(data)
-    })
-    getPoint()
-  },[])
+  
   return (
     <>
       <div className='flex gap-1'>
@@ -23,7 +15,7 @@ function HeaderUserStatus() {
         width={27}
         height={15}
         ></Image>
-        53
+        {point}
         <Image
         src="https://m.shinsegaepoint.com/img/point_gradi.d5d9bfaf.png"
         alt="포인트로고이미지"

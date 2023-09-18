@@ -176,7 +176,7 @@ export const HeaderData =[
   },
   {
     id:36,
-    pathname: '/mypoint/converpntlist',
+    pathname: '/mypoint/convertpntlist',
     title: '마이 포인트'
   },
   {

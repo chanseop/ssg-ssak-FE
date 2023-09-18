@@ -14,7 +14,8 @@ import SignupSuccess from '@/components/pages/signup/SignupSuccess';
 import { useRouter } from 'next/navigation';
 
 
-function SignUpStepper() {
+function 
+SignUpStepper() {
   const router=useRouter();
 
   const [signUpData,setSignUpData]=useState<SignupType>({

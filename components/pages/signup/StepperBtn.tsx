@@ -92,7 +92,7 @@ function StepperBtn({btnText, stepId, setStepId,signUpData,setSignUpData} : {btn
         // fetch를 해야함 여기서
         // console.log('!!!!!!!!!!!!!!!!!!');
         // console.log(signUpData)
-        fetch(`http://15.164.17.12:8000/api/v1/auth/sign-up`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/auth/sign-up`, {
           method: "POST", // *GET, POST, PUT, DELETE 등
           headers: {
             "Content-Type": "application/json",

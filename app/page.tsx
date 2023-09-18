@@ -4,6 +4,7 @@ import { eventDatas } from '@/datas/home/eventData'
 import { anotherEventData } from '@/datas/home/anotherEventData'
 
 export default function Home() {
+  
   return (
     <main className='mt-[100px]' >
       <EventBanner

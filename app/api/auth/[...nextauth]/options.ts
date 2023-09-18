@@ -1,8 +1,8 @@
 import type {NextAuthOptions} from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config();
+// dotenv.config();
 export const options: NextAuthOptions = {
   providers: [
     CredentialsProvider({

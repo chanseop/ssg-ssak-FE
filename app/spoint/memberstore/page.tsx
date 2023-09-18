@@ -1,10 +1,40 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { memstoreListData } from '@/datas/spoint/MemberstoreListData';
 import { memstoreListType } from '@/types/spoint/MemberstoreListType';
 
+// import { useSession } from 'next-auth/react';
+
 function memberstore() {
+
+  // const session = useSession()
+//  console.log(session)
+ 
+  const getFetch = async () => {
+    // console.log(session.data?.user.token)
+    try {
+        const res = await fetch(`http://15.164.17.12:8001/api/v1/franchise`,{
+          method:'GET',
+          headers:{
+            "Content-Type": "application/json",
+            // "Authorization": `Bearer ${session.data?.user.token}`
+          }
+        })
+        .then(response=>response.json())
+        .then(data=>console.log(data));
+        
+      } catch (error) {
+        // console.log(error);
+        return
+    }
+  }
+
+  useEffect(()=>{
+    getFetch()
+  },[])
 
   const bell="before:w-[32px] before:h-[32px] before:bg-[url('/images/spoint/bell.png')] before:bg-cover before:bg-no-repeat before:inline-block"
 

@@ -1,11 +1,42 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
+import { useSession } from 'next-auth/react';
+
 
 function Card(props:{types:String}) {
   const {types}=props
   // console.log(types);
+  const [point,setPoint]=useState<number>(0);
+  const token=useSession().data?.user["token"];
+  // console.log(token);
+  
   
   const cardPointLogo="after:ml-[7px] after:w-[33px] after:h-[30px] after:bg-[url('https://m.shinsegaepoint.com/img/point_gradi.d5d9bfaf.png')] after:bg-no-repeat after:bg-cover"
+
   
+  useEffect(()=>{
+    const getFetch = async () => {
+      try {
+          const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/point/possible`,{
+            method:'GET',
+            headers:{
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`
+            }
+          })
+          .then(response=>response.json())
+          .then(data=>setPoint(data.possiblePoint))
+          
+      } catch (error) {
+          // console.log(error);
+          return
+      }
+    }
+    getFetch()
+  },[token,point])
+
+  
+
   return (
     <>
       {
@@ -21,7 +52,7 @@ function Card(props:{types:String}) {
             <div className='item_cnt relative bg-white rounded-[18px] m-h-[160px] h-full mx-[2px] px-[20px] pb-[20px]'>
               <dl className='flex justify-between items-center pt-[24px] pb-[14px] '>
                 <dt className='text-[13px] font-semibold leading-5'>사용 가능</dt>
-                <dd className={`flex items-center text-[24px] leading-7 font-bold ${cardPointLogo}`}>13</dd>
+                <dd className={`flex items-center text-[24px] leading-7 font-bold ${cardPointLogo}`}>{point}</dd>
               </dl>
               <dl className='flex mt-[3px] justify-between'>
                 <dt className='grow-[1.3] shrink text-xs font-normal'>적립 예정</dt>

@@ -6,6 +6,7 @@ import { redirect } from 'next/dist/server/api-utils';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
+import Swal from 'sweetalert2';
 
 function LoginForm() {
 
@@ -73,16 +74,44 @@ function LoginForm() {
       const result = await signIn('credentials', {
         loginId: loginData.loginId,
         password: loginData.password,
-        redirect: true,
+        redirect: false,
+
         callbackUrl: callBackUrl ? callBackUrl : '/'
-      })
+      });
+
+      if(result?.error !==null){
+        Swal.fire({
+          text:'아아디 비밀번호를 확인 후 다시 시도해주세요.',
+          toast:true,
+          position:"top",
+          showConfirmButton:false,
+          timer:1000,
+          timerProgressBar:true,
+          customClass:{
+            container:"my-swal",
+          },
+        });
+      }else{
+        Swal.fire({
+          text: `신세계포인트에 오신 것을 환영합니다.`,
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 1000,
+          timerProgressBar: true,
+          customClass: {
+            container: "my-swal",
+          },
+        });
+        router.push(callBackUrl ? callBackUrl : '/');
+      }
     }
   }
 
   useEffect(() => {
     if(typeof window !== 'undefined') {
       const autoLogin = localStorage.getItem('autoLogin') || '';
-      console.log("localStorage",autoLogin.length > 0 ? autoLogin : 'no data');
+      // console.log("localStorage",autoLogin.length > 0 ? autoLogin : 'no data');
       if(autoLogin) {
         setLoginData({
           ...loginData,

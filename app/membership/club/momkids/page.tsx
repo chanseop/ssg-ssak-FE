@@ -1,8 +1,35 @@
+'use client'
+
 import React from 'react'
 import Image from 'next/image'
 import Linearbutton from '@/components/ui/button/Linearbutton'
+import { useSession } from 'next-auth/react'
 
 function momkids() {
+
+  const session = useSession()
+//  console.log(session)
+
+  const getFetch = async () => {
+    console.log(session.data?.user.token)
+    try {
+        const res = await fetch(`http://15.164.17.12:8001/api/v1/club/mom-kids`,{
+          method:'POST',
+          headers:{
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${session.data?.user.token}`
+          }
+        })
+        .then(response=>response.json())
+        .then(data=>console.log(data));
+        
+      } catch (error) {
+        // console.log(error);
+        return
+    }
+  }
+
+
   return (
     <>
     <main className='mt-[106px]'>
@@ -38,7 +65,8 @@ function momkids() {
           <br /> (단, 온↔오프라인 옴니동의에 동의한 고객에 한하여 적용됩니다.)
         </p>
 
-        <Linearbutton contents='가입하기' url='/membership/club/momkids/detail' />
+        <div className='mt-6 bg-linear_110 text-center text-[14px] font-semibold h-[48px] rounded-[8px] leading-[48px]' onClick={()=>getFetch()}>가입하기</div>
+        {/* <Linearbutton contents='가입하기' url='/membership/club/momkids/detail' /> */}
       </div>
     </main>
     </>

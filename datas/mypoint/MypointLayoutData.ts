@@ -22,7 +22,7 @@ export const MypointLayoutData=[
   {
     id:5,
     layout_name:"포인트 전환",
-    url:"/mypoint/converpntlist"
+    url:"/mypoint/convertpntlist"
   },
   {
     id:6,
